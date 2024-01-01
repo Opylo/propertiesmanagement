@@ -40,6 +40,7 @@ public class PropertyController {
         List<PropertyDTO> propertyList = propertyService.getAllProperties();
         ResponseEntity<List<PropertyDTO>> responseEntity = new ResponseEntity<>(propertyList, HttpStatus.OK);
         System.out.println(dummy);
+        System.out.println(dummy);
         return responseEntity;
     }
 
