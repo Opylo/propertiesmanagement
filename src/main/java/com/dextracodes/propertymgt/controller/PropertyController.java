@@ -15,7 +15,7 @@ import java.util.List;
 public class PropertyController {
 
     //This value is defined in the application.properties file
-    @Value("${psm.dummy}")
+    //@Value("${psm.dummy}")
     private String dummy;
 
     //Allowing springboot to create dependency injection
@@ -39,8 +39,8 @@ public class PropertyController {
     public ResponseEntity<List<PropertyDTO>> getAllPropeties(){
         List<PropertyDTO> propertyList = propertyService.getAllProperties();
         ResponseEntity<List<PropertyDTO>> responseEntity = new ResponseEntity<>(propertyList, HttpStatus.OK);
-        System.out.println(dummy);
-        System.out.println(dummy);
+        //System.out.println(dummy);
+        //System.out.println(dummy);
         return responseEntity;
     }
 

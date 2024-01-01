@@ -18,9 +18,6 @@ public class PropertyEntity {
     @Column(name = "PROPERTY_TITLE", nullable = false)
     private String title;
     private String description;
-    private String ownerName;
-    @Column(name = "EMAIL", nullable = false, unique = true)
-    private String ownerEmail;
     private double price;
     private String address;
 }

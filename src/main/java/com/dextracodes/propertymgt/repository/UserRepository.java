@@ -1,9 +1,13 @@
 package com.dextracodes.propertymgt.repository;
 
 import com.dextracodes.propertymgt.entity.PropertyEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.dextracodes.propertymgt.entity.UserEntity;
 import org.springframework.data.repository.CrudRepository;
 
-public interface PropertyRepository extends CrudRepository<PropertyEntity, Long> {
+import java.util.Optional;
 
+public interface UserRepository extends CrudRepository<UserEntity, Long> {
+    Optional<UserEntity> findByOwnerEmailAndPassword(String email, String password);
+
+    Optional<UserEntity> findByOwnerEmail(String email);
 }
